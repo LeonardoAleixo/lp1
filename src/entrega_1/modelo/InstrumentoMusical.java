@@ -38,14 +38,14 @@ public class InstrumentoMusical {
 		System.out.println("Estamos ouvindo um belo som");
 	}
 	
-	public InstrumentoMusical(String nome, String marca, String modelo) {
+	public InstrumentoMusical(String nome, String marca, String modelo, Boolean possuiCordas) {
 		super();
 		this.nome = nome;
 		this.marca = marca;
 		this.modelo = modelo;
 		this.tocando = false;
 		this.afinado = false;
-		this.possuiCordas = false;
+		this.possuiCordas = possuiCordas;
 	}
 	
 	public Boolean getAfinado() {

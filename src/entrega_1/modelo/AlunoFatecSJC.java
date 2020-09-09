@@ -12,10 +12,6 @@ public class AlunoFatecSJC {
 	public Integer faltas;
 	public Integer presencas;
 	
-	public AlunoFatecSJC(){
-		
-	}
-	
 	public AlunoFatecSJC(String nome, Date dataNascimento, String ra) {
 		super();
 		this.nome = nome;
@@ -96,7 +92,9 @@ public class AlunoFatecSJC {
 		this.faltas = faltas;
 	}
 	
-	
+	public Integer getPresencas(){
+		return this.presencas;
+	}
 	
 	
 }

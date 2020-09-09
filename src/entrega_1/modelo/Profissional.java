@@ -5,6 +5,12 @@ public class Profissional {
 	private Double salario;
 	private String area;
 	private Boolean fezRelatorio;
+	
+	public Profissional(String cargo, Double salario, String area){
+		this.cargo = cargo;
+		this.salario = salario;
+		this.area = area;
+	}
 
 	public void fazerRelatorio() {
 		System.out.println("Relatório completo, você deve entregar para seu chefe");

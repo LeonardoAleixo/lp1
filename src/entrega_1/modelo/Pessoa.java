@@ -16,12 +16,15 @@ public class Pessoa {
 	private Integer qtdFilho;
 
 	public void doarSangue() {
-		Calendar c = Calendar.getInstance();
-		c.setTime(ultimaDoacao);
-		Integer meses = DateUtil.getDifferenceBetweenDates(ultimaDoacao, new Date(), DateUtil.MONTHS);
-		if (meses <= 3) {
-			System.out.println("Você ainda não pode doar sangue!");
-			return;
+		Calendar c = null;
+		if (ultimaDoacao != null) {
+			c = Calendar.getInstance();
+			c.setTime(ultimaDoacao);
+			Integer meses = DateUtil.getDifferenceBetweenDates(ultimaDoacao, new Date(), DateUtil.MONTHS);
+			if (meses <= 3) {
+				System.out.println("Você ainda não pode doar sangue!");
+				return;
+			}
 		}
 		this.doouSangue = true;
 		this.ultimaDoacao = new Date();
@@ -29,6 +32,9 @@ public class Pessoa {
 	}
 
 	public void terFilhos(Integer qtd) {
+		if (qtdFilho == null){
+			this.qtdFilho = 0;
+		}
 		this.qtdFilho += qtd;
 		if (this.qtdFilho > 3) {
 			System.out.println("Parabens você ganhou uma tv");

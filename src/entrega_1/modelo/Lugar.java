@@ -45,7 +45,7 @@ public class Lugar {
 		this.pais = pais;
 	}
 
-	public Boolean getePaisagem() {
+	public Boolean getPaisagem() {
 		return ePaisagem;
 	}
 

@@ -32,7 +32,7 @@ public class Calcado {
 		System.out.println(dados.toString());
 	}
 
-	public void mostrarLimpo() {
+	private void mostrarLimpo() {
 		if (this.limpo) {
 			System.out.println("Agora seu calçado está sujo");
 		} else {
@@ -55,7 +55,7 @@ public class Calcado {
 		mostrarLimpo();
 	}
 
-	public Calcado(Integer numero, String fabricante, String cor, String modelo, Boolean aberto, Boolean mataBarata) {
+	public Calcado(Integer numero, String fabricante, String cor, String modelo, Boolean aberto, Boolean mataBarata, Character genero) {
 		super();
 		this.numero = numero;
 		this.fabricante = fabricante;
@@ -64,6 +64,7 @@ public class Calcado {
 		this.amarrado = true;
 		this.aberto = aberto;
 		this.mataBarata = mataBarata;
+		this.genero = genero;
 		this.limpo = true;
 	}
 
