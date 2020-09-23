@@ -54,9 +54,10 @@ public class Calcado {
 		this.limpo = true;
 		mostrarLimpo();
 	}
+	
+	
 
 	public Calcado(Integer numero, String fabricante, String cor, String modelo, Boolean aberto, Boolean mataBarata, Character genero) {
-		super();
 		this.numero = numero;
 		this.fabricante = fabricante;
 		this.cor = cor;

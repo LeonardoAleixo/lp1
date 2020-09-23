@@ -8,7 +8,6 @@ import entrega_1.modelo.AlunoFatecSJC;
 import entrega_1.modelo.Calcado;
 import entrega_1.modelo.InstrumentoMusical;
 import entrega_1.modelo.Lugar;
-import entrega_1.modelo.Pessoa;
 import entrega_1.modelo.Profissional;
 
 public class Lp1Main {
@@ -61,16 +60,6 @@ public class Lp1Main {
 			lugar.nadar();
 		}
 		
-		//Testando Pessoa
-		List<Pessoa> listaPessoas = new ArrayList<>();
-		listaPessoas.add(new Pessoa("Victor", new Date(1995, 11, 21), 1.73, "12345789", false, null));
-		listaPessoas.add(new Pessoa("Leonardo", new Date(1999, 01, 01), 1.78, "654987321", true, new Date()));
-		listaPessoas.add(new Pessoa("Paulo", new Date(1994, 02, 03), 1.97, "77777777", false, null));
-		listaPessoas.add(new Pessoa("Jeison", new Date(1995, 03, 18), 1.67, "88888888", false, null));
-		for(Pessoa pessoa : listaPessoas){
-			pessoa.doarSangue();
-			pessoa.terFilhos(4 + listaPessoas.indexOf(pessoa));
-		}
 		
 		//testando Profissional
 		List<Profissional> listaProfissional = new ArrayList<>();
