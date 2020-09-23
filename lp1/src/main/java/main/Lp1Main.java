@@ -15,10 +15,10 @@ public class Lp1Main {
 	public static void main(String[] args){
 		// Testando AlunoFatecSJC
 		
-		List<AlunoFatecSJC> listaAlunos = new ArrayList<>();
+		List<AlunoFatecSJC> listaAlunos = new ArrayList<AlunoFatecSJC>();
 		listaAlunos.add(new AlunoFatecSJC("Leonardo", new Date(1999, 01, 01), "123465789"));
 		listaAlunos.add(new AlunoFatecSJC("Mauricio", new Date(1999, 01, 01), "123465789"));
-		listaAlunos.add(new AlunoFatecSJC("Júnior", new Date(1999, 01, 01), "123465789"));
+		listaAlunos.add(new AlunoFatecSJC("Jï¿½nior", new Date(1999, 01, 01), "123465789"));
 		for(AlunoFatecSJC alunoFatecSJC : listaAlunos){
 			alunoFatecSJC.acrescentarPresencas(1 + listaAlunos.indexOf(alunoFatecSJC) * (listaAlunos.indexOf(alunoFatecSJC) + 1));
 			alunoFatecSJC.acrescentarFaltas(5);
@@ -28,8 +28,8 @@ public class Lp1Main {
 			alunoFatecSJC.mostrarDados();
 		}
 		
-		//Testando calçado
-		List<Calcado> listaCalcados = new ArrayList<>();
+		//Testando calï¿½ado
+		List<Calcado> listaCalcados = new ArrayList<Calcado>();
 		listaCalcados.add(new Calcado(42, "Havaianas", "Branca", "Guga", true, true, 'M'));
 		listaCalcados.add(new Calcado(35, "Rasteirinha", "Vermelha", "Xuxa", true, true, 'F'));
 		listaCalcados.add(new Calcado(39, "Converse", "Preto", "AllStar", false, true, 'F'));
@@ -41,20 +41,20 @@ public class Lp1Main {
 		}
 		
 		//Testando Instrumento Musical
-		List<InstrumentoMusical> listaInstrumentoMusical =  new ArrayList<>();
+		List<InstrumentoMusical> listaInstrumentoMusical =  new ArrayList<InstrumentoMusical>();
 		listaInstrumentoMusical.add(new InstrumentoMusical("Guitarra ", "Gibson", "SG", true));
 		listaInstrumentoMusical.add(new InstrumentoMusical("Flauta", "Yamaha", "Transversal", false));
-		listaInstrumentoMusical.add(new InstrumentoMusical("Piano Digital", "Casio", "Não possui", false));
+		listaInstrumentoMusical.add(new InstrumentoMusical("Piano Digital", "Casio", "Nï¿½o possui", false));
 		for(InstrumentoMusical instrumentoMusical : listaInstrumentoMusical){
 			instrumentoMusical.afinar();
 			instrumentoMusical.tocar();
 		}
 		
 		//Testando Lugar
-		List<Lugar> listaLugar = new ArrayList<>();
-		listaLugar.add(new Lugar("Floreanopolis", "Brazil", false, "Português", false));
-		listaLugar.add(new Lugar("Praia grande", "Brazil", false, "Português", true));
-		listaLugar.add(new Lugar("Torre Eiffel", "França", true, "Francês", false));
+		List<Lugar> listaLugar = new ArrayList<Lugar>();
+		listaLugar.add(new Lugar("Floreanopolis", "Brazil", false, "Portuguï¿½s", false));
+		listaLugar.add(new Lugar("Praia grande", "Brazil", false, "Portuguï¿½s", true));
+		listaLugar.add(new Lugar("Torre Eiffel", "Franï¿½a", true, "Francï¿½s", false));
 		for(Lugar lugar : listaLugar){
 			lugar.verPaisagem();
 			lugar.nadar();
@@ -62,7 +62,7 @@ public class Lp1Main {
 		
 		
 		//testando Profissional
-		List<Profissional> listaProfissional = new ArrayList<>();
+		List<Profissional> listaProfissional = new ArrayList<Profissional>();
 		listaProfissional.add(new Profissional("Analista Java", 10000.00, "Desenvolvimento"));
 		listaProfissional.add(new Profissional("CEO", 500000.0, "Diretoria"));
 		

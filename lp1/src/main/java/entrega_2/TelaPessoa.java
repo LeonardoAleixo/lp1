@@ -36,20 +36,20 @@ public class TelaPessoa extends JFrame {
 	static Pessoa pessoa = null;
 
 	private void testaJFormattedTextField() {
-		SimpleDateFormat dMA = new SimpleDateFormat("dd/MM/yyyy");
+		final SimpleDateFormat dMA = new SimpleDateFormat("dd/MM/yyyy");
 		Container janela = getContentPane();
 		setLayout(null);
 
-		// Define os rótulos dos botões
+		// Define os rï¿½tulos dos botï¿½es
 		JLabel labelNome = new JLabel("Nome: ");
 		JLabel labelDataNascimento = new JLabel("Data de nasc: ");
 		JLabel labelAltura = new JLabel("Altura: ");
 		JLabel labelRg = new JLabel("RG: ");
 		JLabel labelDoouSangue = new JLabel("Doou sangue: ");
-		JLabel labelUltimaDoacao = new JLabel("Última doação: ");
-		JLabel labelInfo = new JLabel("");
-		JLabel labelTv = new JLabel();
-		JLabel labelDoacao = new JLabel();
+		JLabel labelUltimaDoacao = new JLabel("ï¿½ltima doaï¿½ï¿½o: ");
+		final JLabel labelInfo = new JLabel("");
+		final JLabel labelTv = new JLabel();
+		final JLabel labelDoacao = new JLabel();
 
 		labelNome.setBounds(50, 20, 100, 20);
 		labelDataNascimento.setBounds(50, 40, 100, 20);
@@ -61,7 +61,7 @@ public class TelaPessoa extends JFrame {
 		labelTv.setBounds(351, 200, 150, 150);
 		labelDoacao.setBounds(150, 290, 200, 200);
 
-		// Define as máscaras
+		// Define as mï¿½scaras
 		MaskFormatter mascaraData = null;
 
 		NumberFormatter formatter = null;
@@ -77,22 +77,22 @@ public class TelaPessoa extends JFrame {
 			formatter.setCommitsOnValidEdit(true);
 
 		} catch (ParseException excp) {
-			System.err.println("Erro na formatação: " + excp.getMessage());
+			System.err.println("Erro na formataï¿½ï¿½o: " + excp.getMessage());
 			System.exit(-1);
 		}
 
-		// Seta as máscaras nos objetos JFormattedTextField
-		JFormattedTextField jFDataNascimento = new JFormattedTextField(mascaraData);
+		// Seta as mï¿½scaras nos objetos JFormattedTextField
+		final JFormattedTextField jFDataNascimento = new JFormattedTextField(mascaraData);
 		jFDataNascimento.setText("01/01/1999");
-		JTextField jFNome = new JTextField("");
+		final JTextField jFNome = new JTextField("");
 		jFNome.setText("Leo");
-		JFormattedTextField jFAltura = new JFormattedTextField(formatter);
+		final JFormattedTextField jFAltura = new JFormattedTextField(formatter);
 		jFAltura.setText("1");
-		JTextField jFRg = new JTextField();
+		final JTextField jFRg = new JTextField();
 		jFRg.setText("523308292");
-		JCheckBox jDoouSangue = new JCheckBox();
+		final JCheckBox jDoouSangue = new JCheckBox();
 		jDoouSangue.setSelected(true);
-		JFormattedTextField jFUltimaDoancao = new JFormattedTextField(mascaraData);
+		final JFormattedTextField jFUltimaDoancao = new JFormattedTextField(mascaraData);
 		jFUltimaDoancao.setText("01/09/2020");
 		jFNome.setBounds(150, 20, 140, 20);
 		jFDataNascimento.setBounds(150, 40, 70, 20);
@@ -108,12 +108,10 @@ public class TelaPessoa extends JFrame {
 		jBTerFilho.setBounds(150, 140, 200, 30);
 		jBDoarSangue.setBounds(351, 140, 200, 30);
 
-		// adiciona funções
+		// adiciona funÃ§Ãµes
 
 		jBTerFilho.addActionListener(new ActionListener() {
-
 			public void actionPerformed(ActionEvent e) {
-
 				try {
 					if (pessoa == null) {
 						pessoa = new Pessoa(jFNome.getText().toString(),
@@ -132,7 +130,6 @@ public class TelaPessoa extends JFrame {
 						ImageIcon imageIcon = new ImageIcon(image);
 						labelTv.setIcon(imageIcon);
 					}
-
 				} catch (NumberFormatException e1) {
 					e1.printStackTrace();
 				} catch (ParseException e1) {
@@ -156,7 +153,6 @@ public class TelaPessoa extends JFrame {
 		
 		jBDoarSangue.addActionListener(new ActionListener() {
 			
-			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (pessoa == null) {
 					try {
@@ -171,7 +167,7 @@ public class TelaPessoa extends JFrame {
 			}
 		});
 
-		// Adiciona os rótulos e os campos de textos com máscaras na tela
+		// Adiciona os rÃ³tulos e os campos de textos com mï¿½scaras na tela
 		janela.add(labelDataNascimento);
 		janela.add(labelNome);
 		janela.add(labelAltura);

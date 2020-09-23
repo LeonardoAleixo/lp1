@@ -8,6 +8,7 @@ import java.util.Date;
 import entrega_1.util.DateUtil;
 import entrega_2.constantes.Constante;
 import junit.framework.Assert;
+import org.junit.Test;
 
 public class Pessoa {
 
@@ -43,33 +44,38 @@ public class Pessoa {
 	}
 	
 	public  String mostrarInformacoes(SimpleDateFormat dMA){
+		test();
 		StringBuilder informacoes = new StringBuilder("");
 		informacoes.append("<html>Nome: ");
-		Assert.assertNotNull(this.getNome());
 		informacoes.append(this.getNome());
 		informacoes.append("<br>Data de nascimento: ");
-		Assert.assertNotNull(this.getDataNascimento());
 		informacoes.append(dMA.format(this.getDataNascimento()));
 		informacoes.append("<br>Altura: ");
-		Assert.assertNotNull(this.getAltura());
 		informacoes.append(this.getAltura().toString());
 		informacoes.append("<br>RG: ");
-		Assert.assertNotNull(this.getRg());
 		informacoes.append(this.getRg());
 		informacoes.append("<br>Doou sangue: ");
-		Assert.assertNotNull(this.getDoouSangue());
-		informacoes.append(this.getDoouSangue() ? "Sim" : "N�o");
+		informacoes.append(this.getDoouSangue() ? "Sim" : "Não");
 		informacoes.append("<br>Última doação: ");
-		Assert.assertNotNull(this.getUltimaDoacao());
-		informacoes.append(this.getUltimaDoacao() != null ? dMA.format(this.getUltimaDoacao()) : "N�o informado");
+		informacoes.append(this.getUltimaDoacao() != null ? dMA.format(this.getUltimaDoacao()) : "Não informado");
 		informacoes.append("<br>Qtd. Filhos: ");
-		Assert.assertNotNull(this.getQtdFilho());
 		informacoes.append(this.getQtdFilho().toString());
 		informacoes.append("<br>");
 		informacoes.append(this.getQtdFilho() >= 5  ? "Voc� ganhou um presente" : "");
 		informacoes.append("</html>");
 		return informacoes.toString();
 		
+	}
+	
+	
+	@Test
+	public void test(){
+		Assert.assertNotNull(this.getNome());
+		Assert.assertNotNull(this.getDataNascimento());
+		Assert.assertNotNull(this.getAltura());
+		Assert.assertNotNull(this.getRg());
+		Assert.assertNotNull(this.getDoouSangue());
+		Assert.assertNotNull(this.getQtdFilho());
 	}
 
 	public Pessoa(String nome, Date dataNascimento, Double altura, String rg, Boolean doouSangue, Date ultimaDoacao) {
