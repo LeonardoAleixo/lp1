@@ -40,13 +40,13 @@ public class TelaPessoa extends JFrame {
 		Container janela = getContentPane();
 		setLayout(null);
 
-		// Define os r�tulos dos bot�es
+		// Define os rótulos dos botões
 		JLabel labelNome = new JLabel("Nome: ");
 		JLabel labelDataNascimento = new JLabel("Data de nasc: ");
 		JLabel labelAltura = new JLabel("Altura: ");
 		JLabel labelRg = new JLabel("RG: ");
 		JLabel labelDoouSangue = new JLabel("Doou sangue: ");
-		JLabel labelUltimaDoacao = new JLabel("�ltima doa��o: ");
+		JLabel labelUltimaDoacao = new JLabel("Última doação: ");
 		final JLabel labelInfo = new JLabel("");
 		final JLabel labelTv = new JLabel();
 		final JLabel labelDoacao = new JLabel();
@@ -77,11 +77,11 @@ public class TelaPessoa extends JFrame {
 			formatter.setCommitsOnValidEdit(true);
 
 		} catch (ParseException excp) {
-			System.err.println("Erro na formata��o: " + excp.getMessage());
+			System.err.println("Erro na formatação: " + excp.getMessage());
 			System.exit(-1);
 		}
 
-		// Seta as m�scaras nos objetos JFormattedTextField
+		// Seta as máscaras nos objetos JFormattedTextField
 		final JFormattedTextField jFDataNascimento = new JFormattedTextField(mascaraData);
 		jFDataNascimento.setText("01/01/1999");
 		final JTextField jFNome = new JTextField("");
