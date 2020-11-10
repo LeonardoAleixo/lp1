@@ -3,6 +3,7 @@ package entrega_1.modelo;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class InstrumentoMusical {
+	private Integer idInstrumento;
 	private String nome;
 	private String marca;
 	private String modelo;
@@ -19,7 +20,7 @@ public class InstrumentoMusical {
 			return;
 		}
 		this.afinado = true;
-		System.out.println("Seu instrumento está ok!");
+		System.out.println("Seu instrumento estï¿½ ok!");
 	}
 	
 	public void adicionarCordas(){
@@ -28,10 +29,10 @@ public class InstrumentoMusical {
 	
 	public void tocar(){
 		if (tocando){
-			System.out.println("Você já está tocando!");
+			System.out.println("Vocï¿½ jï¿½ estï¿½ tocando!");
 		}
 		if (!this.afinado){
-			System.out.println("Seu instrumento está desafinado :(");
+			System.out.println("Seu instrumento estï¿½ desafinado :(");
 			return;
 		}
 		this.tocando = true;
@@ -48,8 +49,31 @@ public class InstrumentoMusical {
 		this.possuiCordas = possuiCordas;
 	}
 	
+	public InstrumentoMusical(String nome, String marca, String modelo, Boolean possuiCordas, Integer idInstrumento, Boolean afinado) {
+		super();
+		this.nome = nome;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.tocando = false;
+		this.afinado = afinado;
+		this.possuiCordas = possuiCordas;
+		this.idInstrumento = idInstrumento;
+	}
+	
+	public Integer getIdInstrumento() {
+		return idInstrumento;
+	}
+
+	public void setIdInstrumento(Integer idInstrumento) {
+		this.idInstrumento = idInstrumento;
+	}
+
 	public Boolean getAfinado() {
 		return afinado;
+	}
+	
+	public void setAfinado(Boolean afinado){
+		this.afinado = afinado;
 	}
 
 
@@ -62,6 +86,9 @@ public class InstrumentoMusical {
 		return possuiCordas;
 	}
 
+	public void setNome(String nome){
+		this.nome = nome;
+	}
 
 	public String getNome() {
 		return nome;

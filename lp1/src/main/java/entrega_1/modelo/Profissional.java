@@ -1,31 +1,39 @@
 package entrega_1.modelo;
 
 public class Profissional {
+	Integer idProfissional;
 	private String cargo;
 	private Double salario;
 	private String area;
 	private Boolean fezRelatorio;
-	
-	public Profissional(String cargo, Double salario, String area){
+
+	public Profissional(String cargo, Double salario, String area) {
 		this.cargo = cargo;
 		this.salario = salario;
 		this.area = area;
 	}
 
+	public Profissional(String cargo, Double salario, String area, Integer idProfissional) {
+		this.cargo = cargo;
+		this.salario = salario;
+		this.area = area;
+		this.idProfissional = idProfissional;
+	}
+
 	public void fazerRelatorio() {
-		System.out.println("Relatório completo, você deve entregar para seu chefe");
+		System.out.println("Relatï¿½rio completo, vocï¿½ deve entregar para seu chefe");
 		fezRelatorio = true;
 	}
 
 	public void entregarParaOChefe() {
 		this.fezRelatorio = false;
-		System.out.println("Bom relatório!!");
+		System.out.println("Bom relatï¿½rio!!");
 	}
 
 	public void gastarDinheiro(Double valor) {
 		this.salario -= valor;
 		if (salario < 100) {
-			System.out.println("calma lá, tem conta pra pagar!!");
+			System.out.println("calma lï¿½, tem conta pra pagar!!");
 		}
 	}
 
@@ -59,6 +67,19 @@ public class Profissional {
 
 	public void setFezRelatorio(Boolean fezRelatorio) {
 		this.fezRelatorio = fezRelatorio;
+	}
+
+	public Integer getIdProfissional() {
+		return idProfissional;
+	}
+
+	public void setIdProfissional(Integer idProfissional) {
+		this.idProfissional = idProfissional;
+	}
+
+	@Override
+	public String toString() {
+		return "{ area : " + this.area + ", cargo: " + this.cargo + ", salario: " + this.salario + "}";
 	}
 
 }

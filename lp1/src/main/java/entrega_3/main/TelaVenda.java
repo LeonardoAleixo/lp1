@@ -86,7 +86,7 @@ public class TelaVenda extends JFrame implements ActionListener {
 		jfFiltroValor.setBounds(500, 30, 90, 20);
 
 		jTVendas = new JTable(tableModel);
-		jTVendas.setBounds(300, 50, 400, 500);
+		jTVendas.setBounds(400, 50, 400, 500);
 
 		JButton jbFiltrar = new JButton("Filtrar");
 		jbFiltrar.setBounds(600, 30, 90, 20);
@@ -96,7 +96,7 @@ public class TelaVenda extends JFrame implements ActionListener {
 				if (jfFiltroNome.getText().equals("") && jfFiltroValor.getText().equals("")) {
 					JOptionPane.showMessageDialog(jFrameTemp, "Insira pelo menos um filtro");
 				}
-				Map<String, String> filtro = new HashMap<>();
+				Map<String, String> filtro = new HashMap<String, String>();
 				filtro.put("nome", jfFiltroNome.getText());
 				filtro.put("valor", jfFiltroValor.getText());
 				filtrar(filtro);

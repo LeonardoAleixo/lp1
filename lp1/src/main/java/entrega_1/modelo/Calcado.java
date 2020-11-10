@@ -1,6 +1,7 @@
 package entrega_1.modelo;
 
 public class Calcado {
+	private Integer idCalcado;
 	private Integer numero;
 	private String fabricante;
 	private String cor;
@@ -13,7 +14,7 @@ public class Calcado {
 
 	public void mostrarDados() {
 		StringBuilder dados = new StringBuilder();
-		dados.append("Número: ");
+		dados.append("Nï¿½mero: ");
 		dados.append(numero);
 		dados.append("\nFabricante: ");
 		dados.append(fabricante);
@@ -21,22 +22,22 @@ public class Calcado {
 		dados.append(cor);
 		dados.append("\nModelo: ");
 		dados.append(modelo);
-		dados.append("\nGênero: ");
+		dados.append("\nGï¿½nero: ");
 		dados.append(genero == 'M' ? "Masculino" : "Feminino");
-		dados.append("\nEstá amarrado: ");
-		dados.append(amarrado ? " Sim " : "Não");
+		dados.append("\nEstï¿½ amarrado: ");
+		dados.append(amarrado ? " Sim " : "Nï¿½o");
 		dados.append("\nAberto?");
 		dados.append(aberto ? "Aberto" : "Fechado");
-		dados.append("Está amarrado?");
-		dados.append(amarrado ? "Sim" : "Não");
+		dados.append("Estï¿½ amarrado?");
+		dados.append(amarrado ? "Sim" : "Nï¿½o");
 		System.out.println(dados.toString());
 	}
 
 	private void mostrarLimpo() {
 		if (this.limpo) {
-			System.out.println("Agora seu calçado está sujo");
+			System.out.println("Agora seu calï¿½ado estï¿½ sujo");
 		} else {
-			System.out.println("Agora seu calçado está limpo");
+			System.out.println("Agora seu calï¿½ado estï¿½ limpo");
 		}
 	}
 
@@ -45,7 +46,7 @@ public class Calcado {
 			System.out.println("Barata morta");
 			this.limpo = false;
 		} else {
-			System.out.println("Seu calçado não pode matar baratas :(");
+			System.out.println("Seu calï¿½ado nï¿½o pode matar baratas :(");
 		}
 		mostrarLimpo();
 	}
@@ -68,6 +69,20 @@ public class Calcado {
 		this.genero = genero;
 		this.limpo = true;
 	}
+	
+	public Calcado(Integer numero, String fabricante, String cor, String modelo, Boolean aberto, Boolean mataBarata, Character genero, Integer idCalcado) {
+		this.numero = numero;
+		this.fabricante = fabricante;
+		this.cor = cor;
+		this.modelo = modelo;
+		this.amarrado = true;
+		this.aberto = aberto;
+		this.mataBarata = mataBarata;
+		this.genero = genero;
+		this.limpo = true;
+		this.idCalcado = idCalcado;
+	}
+
 
 	public String getModelo() {
 		return modelo;
@@ -145,5 +160,14 @@ public class Calcado {
 	public void setGenero(Character genero) {
 		this.genero = genero;
 	}
+
+	public Integer getIdCalcado() {
+		return idCalcado;
+	}
+
+	public void setIdCalcado(Integer idCalcado) {
+		this.idCalcado = idCalcado;
+	}
+	
 
 }
